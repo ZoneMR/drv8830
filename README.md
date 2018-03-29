@@ -3,7 +3,7 @@ NodeJS software for the I2c motor driver DRV8830.  Rebuilt from Sparkfun firmwar
 
 Credit for 90% of this code goes to:
 
-    [Sparkfun's Mike Hord, aka Mhord'](https://github.com/sparkfun/MiniMoto/blob/master/Libraries/Arduino/src/SparkFunMiniMoto.cpp)
+[Sparkfun's Mike Hord, aka Mhord'](https://github.com/sparkfun/MiniMoto/blob/master/Libraries/Arduino/src/SparkFunMiniMoto.cpp)
 
 Thanks Mike!
 
