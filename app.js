@@ -95,11 +95,11 @@ var drive = function(address, speed) {
     i2c1.writeByteSync(address, 0x00, speed);
 }
 
+var brake = function(address) {}
+
 console.log(getFault(address).message);
 var success = clearFault(address);
 
-// drive(address, -44);
-// sleep.msleep(500);
 
 for (var i = 0; i < 64; i++){
     drive(address, i);
