@@ -21,10 +21,12 @@ const BRAKE             = 0b00000011;
 
 module.exports = class Motor {
 
-    static get FORWARD() { return FORWARD; }
+    /** 1. Add "inverse" motor option
+     *  2. Add option to clear fault on each motor call.
+     *  
+     */
 
-    constructor(address, i2cbus, options = undefined) {
-        
+    constructor(address, i2cbus, options = undefined) {        
         this.address = address
         this.i2cbus = i2cbus
         this.options = options
@@ -46,7 +48,8 @@ module.exports = class Motor {
         
         fault.code = faultCode;
     
-        if (faultCode !== 0) {
+        if (faultCode !== undefined) {
+            console.log(faultCode);
             fault.message = 'Unknown fault.';
             switch (faultCode){
                 case FAULT:
