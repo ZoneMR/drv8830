@@ -10,8 +10,21 @@ var motor1 = new drv8830(motorAddressOne, i2c1);
 var motor2 = new drv8830(motorAddressTwo, i2c1);
 
 motor1.drive(50);
-motor2.drive(-50)
+motor2.drive(50)
+sleep.msleep(3500);
+motor1.drive(-50);
+motor2.drive(50);
 sleep.msleep(1500);
+motor1.drive(50);
+motor2.drive(50)
+sleep.msleep(3500);
+motor1.drive(-50);
+motor2.drive(50);
+sleep.msleep(1500);
+motor1.drive(50);
+motor2.drive(50)
+sleep.msleep(3500);
+
 
 motor1.stop();
 motor2.stop();
@@ -20,20 +33,32 @@ console.log(motor2.getFault().message);
 var success = motor1.clearFault();
 var success = motor2.clearFault();
 
-for (var i = 0; i < 63; i++){
-    motor1.drive(i);
-    motor2.drive(i)
-    sleep.msleep(50);
-}
-sleep.msleep(1500);
-for (var i = 63; i > 0; i--){
-    motor1.drive(i);
-    motor2.drive(i)
-    sleep.msleep(50);
-}   
-sleep.msleep(1500);
-motor1.stop();
-motor2.stop();
+// for (var i = 0; i < 63; i++){
+//     motor1.drive(i, undefined, true);
+//     motor2.drive(i*-1, undefined, true)
+//     sleep.msleep(150);
+// }
+// sleep.msleep(1500);
+// for (var i = 63; i > 0; i--){
+//     motor1.drive(i, undefined, true);
+//     motor2.drive(i*-1, undefined, true)
+//     sleep.msleep(150);
+// }
+// for (var i = 0; i < 63; i++){
+//     motor1.drive(i*-1, undefined, true);
+//     motor2.drive(i, undefined, true)
+//     sleep.msleep(150);
+// }
+// sleep.msleep(1500);
+// for (var i = 63; i > 0; i--){
+//     motor1.drive(i*-1, undefined, true);
+//     motor2.drive(i, undefined, true)
+//     sleep.msleep(150);
+// }
+
+// sleep.msleep(1500);
+// motor1.stop();
+// motor2.stop();
 
 // // Drive forward full speed.
 // drive(63);
