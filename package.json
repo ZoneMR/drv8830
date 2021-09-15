@@ -14,7 +14,7 @@
   "author": "Ladvien",
   "license": "MIT",
   "dependencies": {
-    "i2c-bus": "^3.1.0",
+    "i2c-bus": "^5.2.2",
     "ina219": "^0.6.1",
     "sleep": "^6.3.0"
   }
