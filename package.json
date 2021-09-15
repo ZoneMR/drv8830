@@ -2,7 +2,7 @@
   "name": "drv8830",
   "version": "1.0.0",
   "description": "Driver for the DRV8830 I2C motor controller.",
-  "main": "app.js",
+  "main": "drv8830.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
