@@ -123,7 +123,7 @@ module.exports = class Motor {
     
     stop() {
         try {
-            this.drive(0, BRAKE);
+            this.drive(0, HI_Z);
         } catch (e) {
             console.log('Brake command failed.')
         }
