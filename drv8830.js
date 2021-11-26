@@ -41,7 +41,7 @@ module.exports = class Motor {
     
         var faultCode;
         try {
-            this.i2cbus.readByteSync(this.address, FAULT_CMD);
+            faultCode = this.i2cbus.readByteSync(this.address, FAULT_CMD);
         } catch (e) {
             console.log(`Read fault failed: ${e}`)
         }
@@ -88,7 +88,7 @@ module.exports = class Motor {
                 console.log(`Failed to clear faults: ${e}`)
             }
         }
-        return false;
+        return fault;
     }
     
     drive(speed = 0, direction = undefined, checkFault = false) {
