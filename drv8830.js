@@ -82,8 +82,7 @@ module.exports = class Motor {
         var fault = this.getFault(this.address);
         if (fault.code) {
             try {
-                var success = this.i2cbus.writeByteSync(this.address, FAULT_CMD, CLEAR_FAULT);
-                if (success) { return true; }
+                this.i2cbus.writeByteSync(this.address, FAULT_CMD, CLEAR_FAULT);
             } catch (e) {
                 console.log(`Failed to clear faults: ${e}`)
             }
