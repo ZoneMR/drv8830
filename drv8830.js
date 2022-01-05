@@ -33,7 +33,6 @@ module.exports = class Motor {
     }
 
     getFault() {
-
         var fault = {
             message: '',
             code: 0
@@ -49,8 +48,6 @@ module.exports = class Motor {
         fault.code = faultCode;
     
         if (faultCode !== undefined) {
-            console.log(faultCode);
-            fault.message = 'Unknown fault.';
             switch (faultCode){
                 case FAULT:
                     fault.message = 'Unknown fault.'
